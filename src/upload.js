@@ -10,7 +10,7 @@ const ImageUpload = () => {
 
   useEffect(() => {
     getImages()
-  })
+  }, [])
   async function getImages() {
     setSpin(true);
     let data = await fetch("https://rental-app-b051.onrender.com/all", {
@@ -19,9 +19,11 @@ const ImageUpload = () => {
         "content-type": "application/json"
       }
     })
+    
     let out = await data.json();
-    setSpin(false);
+    
     setImages(out.data);
+    setSpin(false);
 
   }
   function book(id) {
