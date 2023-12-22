@@ -16,6 +16,9 @@ function AmountPay() {
   let { days } = useParams();
 
   let totalAmount = +price;
+  console.log(price);
+  console.log(totalAmount);
+
   const [paymentError, setPaymentError] = useState(null);
 
   useEffect(() => {
@@ -57,6 +60,7 @@ function AmountPay() {
 
 
   const makePayment = async () => {
+    alert("Please wait until redirected to payment page");
     try {
       let stripe = await loadStripe("pk_test_51OI6CNSJofmDlhfyWujGWnHu1oLNpQ1VmwOd96hCIZdWgJtK1fSUDrQ099bD3rW5SMebmzwxn0e3nQHZLtnWK4v400Dp9N2Wap");
       findBike[0].priceDetail = totalAmount;
