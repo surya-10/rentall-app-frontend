@@ -14,6 +14,7 @@ function Mybookings() {
         getImages();
         getAllUsers();
     }, []);
+
     async function getImages() {
         setSpin(true);
         let data = await fetch("https://rental-app-b051.onrender.com/all", {
@@ -37,8 +38,14 @@ function Mybookings() {
         let usersData = await users.json();
     }
     async function findbookedbike(datas, userId){
+        if(userId!== null){
+
+        
         let arr = datas.filter((bike) => userId == bike.bookedUserId);
+        console.log(userId);
+        console.log("arr", arr);
         setBookedBike(arr);
+        }
         // return arr;
     }
 
