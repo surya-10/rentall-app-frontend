@@ -42,8 +42,8 @@ function Mybookings() {
 
         
         let arr = datas.filter((bike) => userId == bike.bookedUserId);
-        console.log(userId);
-        console.log("arr", arr);
+        // console.log(userId);
+        // console.log("arr", arr);
         setBookedBike(arr);
         }
         // return arr;
