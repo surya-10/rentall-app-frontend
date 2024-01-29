@@ -14,7 +14,18 @@ function BookBike() {
   let [endDate, setEndDate] = useState(new Date())
   useEffect(() => {
     getImages()
+    activatePayment();
   }, [id])
+  async function activatePayment(){
+    let activate = await fetch("https://rental-payment.onrender.com", {
+      method:"GET",
+      headers:{
+        "content-type":"application/jspn"
+      }
+    })
+    let out = await activate.json();
+    console.log(out.msg);
+  }
   async function getImages() {
     let data = await fetch("https://rental-app-b051.onrender.com/all", {
       method: "GET",
