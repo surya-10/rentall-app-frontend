@@ -27,7 +27,7 @@ function Base({children}){
                 <button className='btn bg-warning ms-3 mt-3 mb-3 bt' onClick={()=>navigate("/available-bikes")}>All bikes</button>
               </li>
               <li class="nav-item">
-                <button className='btn bg-warning ms-3 mt-3 mb-3 bt' onClick={()=>navigate("/bookings/userId")}>My booking</button>
+                <button className='btn bg-warning ms-3 mt-3 mb-3 bt' onClick={()=>navigate(`/bookings/${userId}`)}>My booking</button>
               </li>
             </ul>
           </div>
