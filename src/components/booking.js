@@ -12,6 +12,7 @@ function Mybookings() {
     let [bookedBike, setBookedBike] = useState([]);
     // let userId = localStorage.getItem("userId");
     let {userId} = useParams();
+    localStorage.setItem("userId", userId);
      
     useEffect(() => {
         getImages();
