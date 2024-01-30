@@ -65,7 +65,7 @@ function AmountPay() {
       findBike[0].quantity = 1;
 
 
-      const paymentPage = await fetch(`http://localhost:9001/booking/payment-page/user-pay/${id}/${userId}`, {
+      const paymentPage = await fetch(`https://rental-payment.onrender.com/booking/payment-page/user-pay/${id}/${userId}`, {
         method: "POST",
         body: JSON.stringify(findBike),
         headers: {
