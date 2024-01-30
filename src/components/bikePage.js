@@ -59,7 +59,6 @@ function BookBike() {
     let start = new Date(startDate);
     let end = new Date(endDate);
     if (start == end) {
-      console.log("hello")
       return 1;
 
     } else {

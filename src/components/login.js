@@ -37,7 +37,6 @@ function Login() {
         })
         let isExistUser = await result.json();
         setSpin(false)
-        console.log(isExistUser);
         if(isExistUser.status==200){
             localStorage.setItem("userId", isExistUser.userId);
             localStorage.setItem("myUser", isExistUser.name);

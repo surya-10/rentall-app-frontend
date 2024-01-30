@@ -23,7 +23,7 @@ function App() {
         <Route path='/payment/confirm/:id/:price/:startDate/:endDate/:days' element={<AmountPay/>}/>
         <Route path='/cancel' element={<Cancel/>}/>
         <Route path='/success' element={<Success/>}/>
-        <Route path='/bookings' element={<Mybookings/>}/>
+        <Route path='/bookings/:userId' element={<Mybookings/>}/>
         <Route exact path='/' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/forgot-password' element={<CheckEmail/>}/>

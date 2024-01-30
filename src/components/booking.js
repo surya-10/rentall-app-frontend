@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Base from "./base";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Mybookings() {
     
@@ -9,7 +10,9 @@ function Mybookings() {
     let [bikes, setBikes] = useState([]);
     let [count, setCount] = useState(false);
     let [bookedBike, setBookedBike] = useState([]);
-    let userId = localStorage.getItem("userId");
+    // let userId = localStorage.getItem("userId");
+    let {userId} = useParams();
+     
     useEffect(() => {
         getImages();
         getAllUsers();
